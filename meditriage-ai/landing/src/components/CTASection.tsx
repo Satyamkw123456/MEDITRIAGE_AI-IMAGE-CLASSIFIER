@@ -65,7 +65,7 @@ export default function CTASection() {
         </p>
 
         <a
-          href="http://localhost:3001/en/triage/intake"
+          href="http://localhost:3000/en/triage/intake"
           style={{
             padding: '16px 36px',
             borderRadius: '999px',

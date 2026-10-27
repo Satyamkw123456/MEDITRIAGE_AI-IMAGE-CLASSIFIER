@@ -50,8 +50,8 @@ export default function Footer() {
             Governance & Safety
           </h4>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '13px' }}>
-            <li><a href="#privacy" style={{ color: 'var(--muted)', textDecoration: 'none' }}>DPDP Act 2023 Principles</a></li>
-            <li><a href="#terms" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Clinician Supremacy Mandate</a></li>
+            <li><a href="http://localhost:3000/en/privacy" style={{ color: 'var(--muted)', textDecoration: 'none' }}>DPDP Act 2023 Principles</a></li>
+            <li><a href="http://localhost:3000/en/terms" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Clinician Supremacy Mandate</a></li>
             <li><a href="http://localhost:3000/en/dashboard/admin" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Clinical Safety Protocols</a></li>
             <li><a href="http://localhost:3000/en/dashboard/admin" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Cryptographic Audit Logs</a></li>
           </ul>

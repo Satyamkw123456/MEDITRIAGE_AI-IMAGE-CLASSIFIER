@@ -170,7 +170,7 @@ export default function Hero() {
             <Social path="M4 4l6.8 8.2L4.3 20H6l5.6-6.3L16.5 20H20l-7.1-8.6L19.4 4h-1.7l-5.1 5.8L7.6 4z" />
             <Social path="M4.5 9H7v11H4.5zM5.75 4a1.6 1.6 0 100 3.2 1.6 1.6 0 000-3.2zM9.5 9H12v1.6c.4-.8 1.6-1.7 3.2-1.7 2.6 0 3.3 1.6 3.3 4.2V20H16v-4.9c0-1.3-.5-2.1-1.6-2.1S12.5 13.8 12.5 15V20H9.5z" />
           </div>
-          <a href="#privacy" className="hidden sm:inline-block" style={barLabel}>Privacy Policy</a>
+          <a href="http://localhost:3000/en/privacy" className="hidden sm:inline-block" style={barLabel}>Privacy Policy</a>
         </div>
 
         <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', ...barLabel, display: 'flex', gap: '5px' }}>
@@ -179,7 +179,7 @@ export default function Hero() {
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '18px' }}>
-          <a href="#terms" className="hidden sm:inline-block" style={barLabel}>Terms of Service</a>
+          <a href="http://localhost:3000/en/terms" className="hidden sm:inline-block" style={barLabel}>Terms of Service</a>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ opacity: 0.6 }}>
             <path d="M5 15V9M10 19V5M15 16V8M20 13v-2" stroke="var(--muted)" strokeWidth="1.6" strokeLinecap="round" />
           </svg>
