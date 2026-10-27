@@ -54,13 +54,10 @@ export function PatientLayout({
             {/* Logo / Brand */}
             <Link 
               href="/"
-              className="flex items-center gap-2.5 text-primary font-heading font-bold text-lg sm:text-xl tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg py-1 px-1.5"
+              className="flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg py-1 px-1.5"
               aria-label="MediTriage Home"
             >
-              <div className="w-8 h-8 rounded-lg bg-primary-soft text-primary flex items-center justify-center">
-                <Heart className="w-5 h-5 fill-primary" />
-              </div>
-              <span>MediTriage<span className="text-muted font-normal text-sm ml-1">Care</span></span>
+              <img src="/logo.svg" alt="MediTriage Care" className="h-8 w-auto object-contain" />
             </Link>
 
             {/* Controls: Caregiver Switcher, Elder Mode, Language, Emergency Hotline */}

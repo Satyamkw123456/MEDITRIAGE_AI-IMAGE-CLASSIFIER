@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, HeartPulse } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import TrustPreviewCard from './TrustPreviewCard'
 
 function Social({ path }: { path: string }) {
@@ -67,16 +67,7 @@ export default function Hero() {
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <div style={{
-              width: '28px', height: '28px', borderRadius: '8px',
-              background: 'linear-gradient(135deg, var(--primary), var(--primary-dark))',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: 'var(--shadow-sm)',
-            }}>
-              <HeartPulse size={15} color="#fff" strokeWidth={2.4} />
-            </div>
-            <span style={{ fontSize: '15px', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--ink)', paddingLeft: '0.1em' }}>
-              MediTriage AI
-            </span>
+            <img src="/logo.svg" alt="MediTriage AI" style={{ height: '38px', width: 'auto', objectFit: 'contain' }} />
           </div>
           <span style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase', color: 'var(--primary-dark)', paddingLeft: '0.3em' }}>
             Clinical Intelligence Platform

@@ -45,17 +45,10 @@ export const Header: React.FC = () => {
     <header className="border-b border-slate-200 bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href={`/${locale}`} className="flex items-center space-x-3 group">
-          <div className="w-9 h-9 rounded-lg bg-teal-600 group-hover:bg-teal-700 transition flex items-center justify-center text-white font-bold text-lg shadow">
-            +
-          </div>
-          <div>
-            <span className="font-bold text-slate-900 text-lg tracking-tight">
-              MediTriage <span className="text-teal-600">AI</span>
-            </span>
-            <span className="ml-2 text-xs bg-teal-50 text-teal-800 font-semibold px-2 py-0.5 rounded-full border border-teal-200">
-              Clinical Platform
-            </span>
-          </div>
+          <img src="/logo.svg" alt="MediTriage AI" className="h-9 w-auto object-contain transition-transform group-hover:scale-105" />
+          <span className="hidden sm:inline-block text-xs bg-teal-50 text-teal-800 font-semibold px-2 py-0.5 rounded-full border border-teal-200">
+            Clinical Platform
+          </span>
         </Link>
 
         <div className="flex items-center space-x-4">

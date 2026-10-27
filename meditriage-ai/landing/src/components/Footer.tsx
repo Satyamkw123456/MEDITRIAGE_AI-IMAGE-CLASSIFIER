@@ -1,4 +1,3 @@
-import { HeartPulse } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -24,23 +23,7 @@ export default function Footer() {
         {/* Brand & Purpose column */}
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
-            <div
-              style={{
-                width: '28px',
-                height: '28px',
-                borderRadius: '8px',
-                background: 'linear-gradient(135deg, var(--primary), var(--primary-dark))',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#ffffff',
-              }}
-            >
-              <HeartPulse size={16} strokeWidth={2.4} />
-            </div>
-            <span style={{ fontSize: '15px', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-              MediTriage AI
-            </span>
+            <img src="/logo.svg" alt="MediTriage AI" style={{ height: '36px', width: 'auto', objectFit: 'contain' }} />
           </div>
           <p style={{ fontSize: '13px', color: 'var(--muted)', lineHeight: 1.6, maxWidth: '300px' }}>
             AI-assisted clinical decision support for geriatric triage. It does not replace
@@ -54,10 +37,10 @@ export default function Footer() {
             Clinical Platform
           </h4>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '13px' }}>
-            <li><a href="http://localhost:3001/en/triage/intake" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Triage Intake</a></li>
-            <li><a href="http://localhost:3001/en/patient/emergency-card" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Emergency QR Card</a></li>
-            <li><a href="http://localhost:3001/en/resources" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Pune Emergency Directory</a></li>
-            <li><a href="http://localhost:3001/en/dashboard/clinician" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Clinician Priority Queue</a></li>
+            <li><a href="http://localhost:3000/en/triage/intake" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Triage Intake</a></li>
+            <li><a href="http://localhost:3000/en/patient/emergency-card" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Emergency QR Card</a></li>
+            <li><a href="http://localhost:3000/en/resources" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Pune Emergency Directory</a></li>
+            <li><a href="http://localhost:3000/en/dashboard/clinician" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Clinician Priority Queue</a></li>
           </ul>
         </div>
 
@@ -69,8 +52,8 @@ export default function Footer() {
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '13px' }}>
             <li><a href="#privacy" style={{ color: 'var(--muted)', textDecoration: 'none' }}>DPDP Act 2023 Principles</a></li>
             <li><a href="#terms" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Clinician Supremacy Mandate</a></li>
-            <li><a href="http://localhost:3001/en/dashboard/admin" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Clinical Safety Protocols</a></li>
-            <li><a href="http://localhost:3001/en/dashboard/admin" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Cryptographic Audit Logs</a></li>
+            <li><a href="http://localhost:3000/en/dashboard/admin" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Clinical Safety Protocols</a></li>
+            <li><a href="http://localhost:3000/en/dashboard/admin" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Cryptographic Audit Logs</a></li>
           </ul>
         </div>
       </div>

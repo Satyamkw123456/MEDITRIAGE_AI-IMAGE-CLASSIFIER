@@ -1,4 +1,3 @@
-import { HeartPulse } from 'lucide-react'
 
 export default function Navbar() {
   return (
@@ -19,32 +18,8 @@ export default function Navbar() {
         borderBottom: '1px solid rgba(18, 38, 58, 0.06)',
       }}
     >
-      <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
-        <div
-          style={{
-            width: '28px',
-            height: '28px',
-            borderRadius: '8px',
-            background: 'linear-gradient(135deg, var(--primary), var(--primary-dark))',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#ffffff',
-          }}
-        >
-          <HeartPulse size={16} strokeWidth={2.4} />
-        </div>
-        <span
-          style={{
-            fontSize: '15px',
-            fontWeight: 700,
-            letterSpacing: '0.08em',
-            textTransform: 'uppercase',
-            color: 'var(--ink)',
-          }}
-        >
-          MediTriage
-        </span>
+      <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+        <img src="/logo.svg" alt="MediTriage" style={{ height: '36px', width: 'auto', objectFit: 'contain' }} />
       </a>
 
       <nav className="hidden md:flex items-center gap-7">
@@ -61,7 +36,7 @@ export default function Navbar() {
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
         <a
-          href="http://localhost:3001/en/login"
+          href="http://localhost:3000/en/login"
           style={{
             padding: '8px 18px',
             borderRadius: '999px',

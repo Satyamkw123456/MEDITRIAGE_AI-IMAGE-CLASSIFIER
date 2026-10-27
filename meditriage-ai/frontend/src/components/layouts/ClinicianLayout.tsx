@@ -50,12 +50,10 @@ export function ClinicianLayout({
         <div className="px-4 sm:px-6 py-2.5 flex items-center justify-between gap-4">
           <div className="flex items-center gap-6">
             <Link 
-              href="/dashboard/doctor"
+              href="/dashboard/clinician"
               className="flex items-center gap-2 font-heading font-bold text-lg text-primary tracking-tight"
             >
-              <div className="w-7 h-7 rounded-lg bg-primary-soft text-primary flex items-center justify-center">
-                <Stethoscope className="w-4 h-4" />
-              </div>
+              <img src="/logo-icon.svg" alt="MediTriage" className="h-7 w-auto object-contain" />
               <span>MediTriage<span className="text-muted font-mono text-xs ml-1.5 uppercase font-medium">Clinician</span></span>
             </Link>
 

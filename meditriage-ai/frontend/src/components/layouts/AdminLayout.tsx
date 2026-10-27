@@ -21,7 +21,8 @@ import {
   Command,
   FileText,
   LifeBuoy,
-  Lock
+  Lock,
+  Globe2
 } from "lucide-react";
 import { LanguageSwitcher } from "../shared/LanguageSwitcher";
 import { PersistentImpersonationBanner } from "../admin/PersistentImpersonationBanner";
@@ -47,6 +48,7 @@ const NAV_GROUPS: NavGroup[] = [
       { name: "Command Room", href: "/dashboard/admin", icon: Activity },
       { name: "Approvals Center", href: "/dashboard/admin/approvals", icon: GitPullRequest, badge: "Dual" },
       { name: "Identity & Access", href: "/dashboard/admin/access", icon: Users },
+      { name: "Clinicians Queue", href: "/dashboard/admin/clinicians", icon: FileCheck2 },
       { name: "Case & Queue Oversight", href: "/dashboard/admin/cases", icon: SlidersHorizontal },
     ],
   },
@@ -54,6 +56,7 @@ const NAV_GROUPS: NavGroup[] = [
     label: "Clinical & AI Control",
     items: [
       { name: "Clinical Governance", href: "/dashboard/admin/governance", icon: FileCheck2 },
+      { name: "World Medical Prices", href: "/dashboard/admin/world-prices", icon: Globe2, badge: "Stitch AI" },
       { name: "AI Control Center", href: "/dashboard/admin/ai-control", icon: Cpu },
       { name: "Content & Resources", href: "/dashboard/admin/content", icon: FileText },
     ],
@@ -166,9 +169,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
         {/* Brand */}
         <div className="p-4 border-b border-line flex items-center justify-between">
           <Link href="/dashboard/admin" className="font-heading font-bold text-lg text-primary flex items-center gap-2.5">
-            <div className="w-7 h-7 rounded-lg bg-primary-soft text-primary flex items-center justify-center">
-              <ShieldAlert className="w-4 h-4" />
-            </div>
+            <img src="/logo-icon.svg" alt="MediTriage Admin" className="h-7 w-auto object-contain" />
             <span>Admin Control</span>
           </Link>
           <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-primary-soft text-primary font-semibold">
