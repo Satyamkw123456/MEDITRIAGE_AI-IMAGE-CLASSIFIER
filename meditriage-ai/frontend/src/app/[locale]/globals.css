@@ -1,0 +1,66 @@
+@import "../../styles/tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Google Fonts webfont fallback import */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+  * {
+    border-color: var(--line);
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-latin), var(--font-devanagari), sans-serif;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Force light theme always: never dark mode (Q1 requirement) */
+  :root {
+    color-scheme: light;
+  }
+}
+
+/* Elder Mode Touch Target Scaling & Accessibility */
+[data-elder="true"] button,
+[data-elder="true"] input,
+[data-elder="true"] select,
+[data-elder="true"] a,
+.elder-mode button,
+.elder-mode input,
+.elder-mode select,
+.elder-mode a {
+  min-height: 56px;
+  min-width: 56px;
+  font-size: 1.125rem;
+}
+
+[data-elder="true"] p,
+[data-elder="true"] span,
+[data-elder="true"] label,
+.elder-mode p,
+.elder-mode span,
+.elder-mode label {
+  font-size: 1.25rem; /* 20px base text for elder mode */
+  line-height: 1.6;
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

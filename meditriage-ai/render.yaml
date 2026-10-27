@@ -1,0 +1,30 @@
+# Render Blueprint: backend API. Frontend is deployed on Vercel (root: frontend).
+services:
+  - type: web
+    name: meditriage-api
+    runtime: python
+    rootDir: backend
+    plan: starter
+    buildCommand: pip install -e .
+    # Single worker: rate limiter + token denylist are in-memory (see docs/KNOWN_LIMITATIONS.md)
+    startCommand: alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port $PORT --workers 1
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      - key: ENVIRONMENT
+        value: production
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: AUDIT_HMAC_KEY
+        generateValue: true
+      - key: DATABASE_URL        # Supabase/Render Postgres connection string (postgresql://...)
+        sync: false
+      - key: BACKEND_CORS_ORIGINS  # your Vercel URL, e.g. https://meditriage.vercel.app
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: TRUSTED_PROXIES       # Render's proxy range; set per Render docs for your region
+        sync: false

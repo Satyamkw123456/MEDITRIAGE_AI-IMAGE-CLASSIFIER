@@ -1,0 +1,12 @@
+{
+  "name": "meditriage-ai",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "Start-Process powershell -ArgumentList '-NoProfile -Command \"cd landing; npm run dev\"' ; Start-Process powershell -ArgumentList '-NoProfile -Command \"cd frontend; npm run dev\"'",
+    "dev:landing": "cd landing && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && .venv/Scripts/python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload",
+    "install:all": "cd landing && npm install && cd ../frontend && npm install"
+  }
+}

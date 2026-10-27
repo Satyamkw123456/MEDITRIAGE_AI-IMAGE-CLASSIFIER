@@ -1,0 +1,53 @@
+{
+  "name": "meditriage-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:tokens": "node scripts/lint-tokens.mjs",
+    "generate:api": "node scripts/generate-api.mjs",
+    "audit:contrast": "node scripts/audit-contrast.mjs",
+    "audit:axe": "node scripts/audit-axe.mjs",
+    "audit:admin-axe": "node scripts/audit-admin-accessibility.mjs",
+    "e2e:admin": "node scripts/e2e-admin-control-plane.mjs",
+    "e2e:cycle12": "node scripts/e2e-cycle12-governance-ops.mjs",
+    "e2e:cycle13": "node scripts/e2e-cycle13-p1-extras.mjs",
+    "test:contract": "node scripts/test-contract-break.mjs",
+    "verify:cycle8": "node scripts/lint-tokens.mjs && node scripts/audit-contrast.mjs && node scripts/audit-axe.mjs && node scripts/test-contract-break.mjs",
+    "verify:cycle11": "node scripts/lint-tokens.mjs && node scripts/audit-contrast.mjs && node scripts/audit-admin-accessibility.mjs && node scripts/e2e-admin-control-plane.mjs",
+    "verify:cycle12": "node scripts/lint-tokens.mjs && node scripts/audit-contrast.mjs && node scripts/audit-admin-accessibility.mjs && node scripts/e2e-cycle12-governance-ops.mjs",
+    "verify:cycle13": "node scripts/lint-tokens.mjs && node scripts/audit-contrast.mjs && node scripts/audit-admin-accessibility.mjs && node scripts/e2e-cycle13-p1-extras.mjs"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.395.0",
+    "next": "^14.2.4",
+    "next-intl": "^4.13.7",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.84.0",
+    "recharts": "^3.10.1",
+    "tailwind-merge": "^2.3.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "axe-core": "^4.13.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.4",
+    "jsdom": "^29.1.1",
+    "openapi-typescript": "^7.13.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.4.5"
+  }
+}

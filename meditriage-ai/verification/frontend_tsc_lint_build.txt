@@ -1,0 +1,61 @@
+== tsc
+TSC_EXIT=0
+== lint
+✔ No ESLint warnings or errors
+== lint:tokens
+=== Design Token Lint Rule: No Ad-Hoc Hex Colors Outside tokens.css ===
+✅ Passed: Zero ad-hoc hex values found outside tokens.css. Single source of truth preserved.
+== build
+  ▲ Next.js 14.2.35
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/3) ...
+ ✓ Generating static pages (3/3)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                       Size     First Load JS
+┌ ○ /_not-found                                   876 B          88.2 kB
+├ ƒ /[locale]                                     178 B          96.2 kB
+├ ƒ /[locale]/ai-hub                              11.1 kB         123 kB
+├ ƒ /[locale]/cases/[caseId]                      5.82 kB         132 kB
+├ ƒ /[locale]/cases/[caseId]/access-history       4.93 kB         117 kB
+├ ƒ /[locale]/dashboard/admin                     6.33 kB         121 kB
+├ ƒ /[locale]/dashboard/admin/access              19.5 kB         134 kB
+├ ƒ /[locale]/dashboard/admin/ai-control          9.8 kB          125 kB
+├ ƒ /[locale]/dashboard/admin/approvals           7.7 kB          123 kB
+├ ƒ /[locale]/dashboard/admin/audit               9.89 kB         127 kB
+├ ƒ /[locale]/dashboard/admin/cases               9.71 kB         125 kB
+├ ƒ /[locale]/dashboard/admin/content             8.96 kB         124 kB
+├ ƒ /[locale]/dashboard/admin/dpdp                11.3 kB         126 kB
+├ ƒ /[locale]/dashboard/admin/flags               17 kB           132 kB
+├ ƒ /[locale]/dashboard/admin/governance          12.5 kB         127 kB
+├ ƒ /[locale]/dashboard/admin/operations          9.86 kB         127 kB
+├ ƒ /[locale]/dashboard/admin/support             6.45 kB         121 kB
+├ ƒ /[locale]/dashboard/clinician                 9.37 kB         118 kB
+├ ƒ /[locale]/dashboard/clinician/cases/[caseId]  13.3 kB         130 kB
+├ ƒ /[locale]/dashboard/patient                   5.76 kB         114 kB
+├ ƒ /[locale]/emergency-card/[token]              5.31 kB        92.6 kB
+├ ƒ /[locale]/gallery                             11.5 kB         130 kB
+├ ƒ /[locale]/login                               5.75 kB         114 kB
+├ ƒ /[locale]/patient/caregivers                  5.86 kB         118 kB
+├ ƒ /[locale]/patient/emergency-card              7.45 kB         119 kB
+├ ƒ /[locale]/register                            4.99 kB         114 kB
+├ ƒ /[locale]/resources                           5.34 kB         117 kB
+├ ƒ /[locale]/triage/consent                      6.12 kB         106 kB
+└ ƒ /[locale]/triage/intake                       11.2 kB         123 kB
++ First Load JS shared by all                     87.3 kB
+  ├ chunks/2117-3657a78e9d025a7e.js               31.7 kB
+  ├ chunks/fd9d1056-bddc3f318ed54192.js           53.6 kB
+  └ other shared chunks (total)                   1.95 kB
+
+
+ƒ Middleware                                      49.7 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+BUILD_DONE

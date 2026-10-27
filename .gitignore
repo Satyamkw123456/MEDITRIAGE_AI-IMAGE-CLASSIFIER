@@ -1,0 +1,63 @@
+# Root Git Ignore for MediTriage AI
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*/.venv/
+meditriage-ai/backend/.venv/
+ENV/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environment and Secrets
+.env
+.env.local
+.env.*.local
+*.env
+*.secret
+
+# Node.js & Next.js
+node_modules/
+*/node_modules/
+meditriage-ai/frontend/node_modules/
+.next/
+*/.next/
+meditriage-ai/frontend/.next/
+out/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store
+*.tsbuildinfo
+
+# IDE and OS
+.idea/
+.vscode/
+.antigravity/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Database / SQLite local dev files
+*.sqlite3
+*.db
+chroma_db/
+backend/chroma_db/
+
+# Local Dev logs & archives
+dev-logbook/
+meditriage-ai-project.zip
+*.zip

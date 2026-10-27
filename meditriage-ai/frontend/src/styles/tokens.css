@@ -1,0 +1,65 @@
+/* MediTriage AI — Shared Design Tokens (Cycle 8) */
+/* Single Source of Truth for Design System Tokens (AC-03, AC-08) */
+
+:root {
+  /* Surfaces & Canvas */
+  --bg: #FBFAF7;
+  --surface: #FFFFFF;
+  --ink: #12263A;
+  --muted: #5B6B7A;
+  --line: #E6E9EE;
+
+  /* Primary Brand & Soft Highlight */
+  --primary: #0E7C86;
+  --primary-soft: #E4F3F4;
+  --primary-hover: #0a626a;
+
+  /* Clinical Triage Status Colors (Must be paired with icons and labels, never color alone) */
+  --emergency: #C62828;
+  --emergency-soft: #FFEBEE;
+  --urgent: #D97706;
+  --urgent-soft: #FEF3C7;
+  --routine: #1F6FB2;
+  --routine-soft: #E0F2FE;
+  --selfcare: #2E7D5B;
+  --selfcare-soft: #E8F5E9;
+
+  /* Radii & Elevation */
+  --radius: 14px;
+  --radius-sm: 8px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  --shadow: 0 1px 2px rgba(18, 38, 58, 0.06), 0 8px 24px rgba(18, 38, 58, 0.06);
+  --shadow-sm: 0 1px 3px rgba(18, 38, 58, 0.08);
+  --shadow-lg: 0 12px 32px rgba(18, 38, 58, 0.12);
+
+  /* Typography Stacks */
+  --font-latin: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-devanagari: "Noto Sans Devanagari", "Plus Jakarta Sans", sans-serif;
+  --font-family-base: var(--font-latin), var(--font-devanagari);
+
+  /* Standard Base Metric Scale */
+  --text-base: 1rem;       /* 16px */
+  --touch-target: 44px;    /* Standard WCAG minimum touch target */
+}
+
+/* Elder Mode Layout Override (High Contrast >= 7:1, 20px Base Text, 56px Touch Target) */
+[data-elder="true"],
+.elder-mode {
+  --text-base: 1.25rem;    /* 20px base text */
+  --touch-target: 56px;    /* 56px minimum touch target */
+  --muted: #273746;        /* High-contrast muted text >= 7:1 against --bg and --surface */
+  --line: #CBD5E1;         /* High-contrast border line */
+}
+
+/* Language font-family switching based on HTML lang attribute */
+html[lang="hi"],
+html[lang="mr"],
+.font-devanagari {
+  font-family: var(--font-devanagari);
+}
+
+html[lang="en"],
+.font-latin {
+  font-family: var(--font-latin);
+}

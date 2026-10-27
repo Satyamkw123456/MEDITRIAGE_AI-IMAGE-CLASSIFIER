@@ -1,0 +1,103 @@
+{
+  "fall": [
+    "fall",
+    "fell",
+    "fallen",
+    "falling",
+    "slipped",
+    "trip",
+    "tripped",
+    "padla",
+    "padli",
+    "gir gaya",
+    "gir gayi",
+    "girna",
+    "loss of balance"
+  ],
+  "confusion": [
+    "confusion",
+    "confused",
+    "disoriented",
+    "disorientation",
+    "delirium",
+    "bhavna",
+    "bhram",
+    "gadbad",
+    "samajh nahi aa raha",
+    "smruti bhransh",
+    "not making sense",
+    "memory lapse"
+  ],
+  "dizziness_vertigo": [
+    "vertigo",
+    "dizzy",
+    "dizziness",
+    "chakkar",
+    "chakkar aana",
+    "giddiness",
+    "unsteady",
+    "unsteadiness",
+    "tol gela",
+    "spinning"
+  ],
+  "chest_pain": [
+    "chest pain",
+    "angina",
+    "chhati me dard",
+    "chhatit dukhne",
+    "chhati madhe vedna",
+    "chest pressure",
+    "substernal pain"
+  ],
+  "shortness_of_breath": [
+    "shortness of breath",
+    "breathless",
+    "breathlessness",
+    "dyspnea",
+    "saas phoolna",
+    "dum lagna",
+    "shwas ghyayla tras",
+    "struggling to breathe"
+  ],
+  "fever": [
+    "fever",
+    "bukhar",
+    "taap",
+    "high temperature",
+    "chills",
+    "thandi wajne",
+    "shivering"
+  ],
+  "weakness": [
+    "weakness",
+    "kamzori",
+    "ashaktapana",
+    "lethargy",
+    "fatigue",
+    "tiredness",
+    "exhaustion"
+  ],
+  "speech_change": [
+    "slurred speech",
+    "bolne me takleef",
+    "bolayla tras",
+    "speech change",
+    "garbled speech",
+    "incoherent"
+  ],
+  "headache": [
+    "headache",
+    "sar dard",
+    "doke dukhi",
+    "head pain"
+  ],
+  "abdominal_pain": [
+    "abdominal pain",
+    "stomach pain",
+    "pet dard",
+    "potat dukhne",
+    "cramp",
+    "cramping",
+    "belly pain"
+  ]
+}

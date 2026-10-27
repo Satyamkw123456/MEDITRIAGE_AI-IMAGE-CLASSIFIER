@@ -1,0 +1,4 @@
+# Local Development Logbook and Test Data (Never commit to build context)
+dev-logbook/
+dev-test-data/
+dev-content-source/
