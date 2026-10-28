@@ -60,13 +60,21 @@ uvicorn app.main:app --reload --port 8000
 ```
 API Documentation will be accessible at: `http://localhost:8000/docs`
 
-### 2. Frontend Setup
+### 2. Frontend Setup (Clinical Platform)
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
 Frontend web interface will be accessible at: `http://localhost:3000`
+
+### 3. Landing Page Setup (Marketing & Patient Intake)
+```bash
+cd landing
+npm install
+npm run dev -- --port 3001
+```
+Landing page will be accessible at: `http://localhost:3001`
 
 ---
 
