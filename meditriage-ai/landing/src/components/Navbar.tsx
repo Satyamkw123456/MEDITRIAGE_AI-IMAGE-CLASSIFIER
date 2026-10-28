@@ -8,7 +8,7 @@ export default function Navbar() {
         left: 0,
         right: 0,
         zIndex: 50,
-        padding: '16px 36px',
+        padding: '12px 32px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',

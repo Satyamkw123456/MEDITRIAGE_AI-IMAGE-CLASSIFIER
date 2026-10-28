@@ -17,7 +17,7 @@ const barLabel: React.CSSProperties = {
 
 export default function Hero() {
   return (
-    <section style={{ position: 'relative', width: '100%', height: '100vh', minHeight: '640px', overflow: 'hidden' }}>
+    <section style={{ position: 'relative', width: '100%', minHeight: '100vh', overflow: 'hidden' }}>
       {/* Video Background — fully visible */}
       <video
         style={{
@@ -46,30 +46,45 @@ export default function Hero() {
       />
 
       {/* Centered lockup — Glacier-mechanic staggered reveal */}
-      <div style={{ position: 'relative', zIndex: 10, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '0 24px' }}>
-
+      <div
+        style={{
+          position: 'relative',
+          zIndex: 10,
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          textAlign: 'center',
+          paddingTop: '116px',
+          paddingBottom: '90px',
+          paddingLeft: '24px',
+          paddingRight: '24px',
+          boxSizing: 'border-box',
+        }}
+      >
         {/* Brand lockup */}
         <motion.div
           initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
           style={{
-            display: 'flex',
+            display: 'inline-flex',
             flexDirection: 'column',
             alignItems: 'center',
-            gap: '8px',
-            marginBottom: '26px',
-            background: 'rgba(255, 255, 255, 0.7)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            padding: '14px 32px',
+            gap: '6px',
+            marginBottom: '20px',
+            background: 'rgba(255, 255, 255, 0.78)',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
+            padding: '10px 28px',
             borderRadius: '999px',
-            border: '1px solid rgba(255, 255, 255, 0.85)',
-            boxShadow: '0 4px 16px rgba(18, 38, 58, 0.06)',
+            border: '1px solid rgba(255, 255, 255, 0.9)',
+            boxShadow: '0 4px 18px rgba(18, 38, 58, 0.07)',
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img src="/logo.svg" alt="MediTriage AI" style={{ height: '54px', width: 'auto', objectFit: 'contain' }} />
+            <img src="/logo.svg" alt="MediTriage AI" style={{ height: '44px', width: 'auto', objectFit: 'contain' }} />
           </div>
-          <span style={{ fontSize: '10.5px', fontWeight: 700, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--primary-dark)', marginTop: '2px' }}>
+          <span style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '0.24em', textTransform: 'uppercase', color: 'var(--primary-dark)', marginTop: '1px' }}>
             Clinical Intelligence Platform
           </span>
         </motion.div>
