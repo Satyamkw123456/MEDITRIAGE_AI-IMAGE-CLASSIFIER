@@ -22,8 +22,8 @@ export default function Footer() {
       >
         {/* Brand & Purpose column */}
         <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
-            <img src="/logo.svg" alt="MediTriage AI" style={{ height: '36px', width: 'auto', objectFit: 'contain' }} />
+          <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
+            <img src="/logo.svg" alt="MediTriage AI" style={{ height: '46px', width: 'auto', objectFit: 'contain' }} />
           </div>
           <p style={{ fontSize: '13px', color: 'var(--muted)', lineHeight: 1.6, maxWidth: '300px' }}>
             AI-assisted clinical decision support for geriatric triage. It does not replace

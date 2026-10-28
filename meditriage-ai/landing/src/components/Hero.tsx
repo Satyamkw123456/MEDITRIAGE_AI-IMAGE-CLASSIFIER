@@ -60,16 +60,16 @@ export default function Hero() {
             background: 'rgba(255, 255, 255, 0.7)',
             backdropFilter: 'blur(10px)',
             WebkitBackdropFilter: 'blur(10px)',
-            padding: '10px 22px',
+            padding: '14px 32px',
             borderRadius: '999px',
             border: '1px solid rgba(255, 255, 255, 0.85)',
             boxShadow: '0 4px 16px rgba(18, 38, 58, 0.06)',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <img src="/logo.svg" alt="MediTriage AI" style={{ height: '38px', width: 'auto', objectFit: 'contain' }} />
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <img src="/logo.svg" alt="MediTriage AI" style={{ height: '54px', width: 'auto', objectFit: 'contain' }} />
           </div>
-          <span style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase', color: 'var(--primary-dark)', paddingLeft: '0.3em' }}>
+          <span style={{ fontSize: '10.5px', fontWeight: 700, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--primary-dark)', marginTop: '2px' }}>
             Clinical Intelligence Platform
           </span>
         </motion.div>

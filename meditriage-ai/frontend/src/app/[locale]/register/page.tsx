@@ -70,8 +70,14 @@ export default function RegisterPage() {
 
   return (
     <div className="min-h-[90vh] flex items-center justify-center px-4 py-12 bg-bg">
-      <div className="w-full max-w-xl bg-surface rounded-card shadow-card border border-line overflow-hidden">
-        <div className="bg-primary-soft px-6 py-6 text-center border-b border-line">
+      <div className="w-full max-w-xl space-y-4">
+        <div className="flex justify-center mb-2">
+          <Link href={`/${locale}`}>
+            <img src="/logo.svg" alt="MediTriage AI" className="h-14 w-auto object-contain hover:scale-105 transition-transform drop-shadow-sm" />
+          </Link>
+        </div>
+        <div className="w-full bg-surface rounded-card shadow-card border border-line overflow-hidden">
+          <div className="bg-primary-soft px-6 py-6 text-center border-b border-line">
           <div className="inline-flex items-center justify-center w-12 h-12 bg-surface rounded-full mb-3 text-primary shadow-sm">
             <UserPlus className="w-6 h-6" aria-hidden />
           </div>
@@ -162,6 +168,7 @@ export default function RegisterPage() {
             <Link href={`/${locale}/login`} className="font-semibold text-primary underline">Sign in</Link>
           </p>
         </div>
+      </div>
       </div>
     </div>
   );

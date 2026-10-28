@@ -44,8 +44,8 @@ export const Header: React.FC = () => {
   return (
     <header className="border-b border-slate-200 bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <Link href={`/${locale}`} className="flex items-center space-x-3 group">
-          <img src="/logo.svg" alt="MediTriage AI" className="h-9 w-auto object-contain transition-transform group-hover:scale-105" />
+        <Link href={`/${locale}`} className="flex items-center space-x-3 group py-1">
+          <img src="/logo.svg" alt="MediTriage AI" className="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105" />
           <span className="hidden sm:inline-block text-xs bg-teal-50 text-teal-800 font-semibold px-2 py-0.5 rounded-full border border-teal-200">
             Clinical Platform
           </span>

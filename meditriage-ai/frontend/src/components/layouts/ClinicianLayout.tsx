@@ -51,9 +51,9 @@ export function ClinicianLayout({
           <div className="flex items-center gap-6">
             <Link 
               href="/dashboard/clinician"
-              className="flex items-center gap-2 font-heading font-bold text-lg text-primary tracking-tight"
+              className="flex items-center gap-2.5 font-heading font-bold text-lg text-primary tracking-tight"
             >
-              <img src="/logo-icon.svg" alt="MediTriage" className="h-7 w-auto object-contain" />
+              <img src="/logo-icon.svg" alt="MediTriage" className="h-9 w-auto object-contain" />
               <span>MediTriage<span className="text-muted font-mono text-xs ml-1.5 uppercase font-medium">Clinician</span></span>
             </Link>
 

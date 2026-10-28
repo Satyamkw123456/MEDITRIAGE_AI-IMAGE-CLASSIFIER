@@ -32,7 +32,8 @@ function LoginForm() {
     }
   };
 
-  const isDemoMode = process.env.NEXT_PUBLIC_DEMO_MODE === 'true';
+  const isDemoMode =
+    process.env.NEXT_PUBLIC_DEMO_MODE === 'true' || process.env.NODE_ENV !== 'production';
 
   const handleDemoFill = (role: 'patient' | 'clinician' | 'admin') => {
     setError(null);
@@ -69,9 +70,15 @@ function LoginForm() {
         </div>
       )}
 
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
-        {/* Top Header banner */}
-        <div className="bg-gradient-to-r from-teal-700 to-teal-900 px-6 py-6 text-white text-center">
+      <div className="w-full max-w-md space-y-4">
+        <div className="flex justify-center mb-2">
+          <Link href={`/${locale}`}>
+            <img src="/logo.svg" alt="MediTriage AI" className="h-14 w-auto object-contain hover:scale-105 transition-transform drop-shadow-sm" />
+          </Link>
+        </div>
+        <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+          {/* Top Header banner */}
+          <div className="bg-gradient-to-r from-teal-700 to-teal-900 px-6 py-6 text-white text-center">
           <div className="inline-flex items-center justify-center w-12 h-12 bg-white/10 rounded-full mb-3">
             <ShieldCheck className="w-6 h-6 text-teal-200" />
           </div>
@@ -176,6 +183,7 @@ function LoginForm() {
             </Link>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

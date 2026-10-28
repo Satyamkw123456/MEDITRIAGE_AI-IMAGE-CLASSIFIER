@@ -57,7 +57,7 @@ export function PatientLayout({
               className="flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg py-1 px-1.5"
               aria-label="MediTriage Home"
             >
-              <img src="/logo.svg" alt="MediTriage Care" className="h-8 w-auto object-contain" />
+              <img src="/logo.svg" alt="MediTriage Care" className="h-10 sm:h-11 w-auto object-contain" />
             </Link>
 
             {/* Controls: Caregiver Switcher, Elder Mode, Language, Emergency Hotline */}

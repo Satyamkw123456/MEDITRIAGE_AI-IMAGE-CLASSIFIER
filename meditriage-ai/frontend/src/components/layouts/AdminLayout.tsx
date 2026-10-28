@@ -56,7 +56,6 @@ const NAV_GROUPS: NavGroup[] = [
     label: "Clinical & AI Control",
     items: [
       { name: "Clinical Governance", href: "/dashboard/admin/governance", icon: FileCheck2 },
-      { name: "World Medical Prices", href: "/dashboard/admin/world-prices", icon: Globe2, badge: "Stitch AI" },
       { name: "AI Control Center", href: "/dashboard/admin/ai-control", icon: Cpu },
       { name: "Content & Resources", href: "/dashboard/admin/content", icon: FileText },
     ],
@@ -169,7 +168,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
         {/* Brand */}
         <div className="p-4 border-b border-line flex items-center justify-between">
           <Link href="/dashboard/admin" className="font-heading font-bold text-lg text-primary flex items-center gap-2.5">
-            <img src="/logo-icon.svg" alt="MediTriage Admin" className="h-7 w-auto object-contain" />
+            <img src="/logo-icon.svg" alt="MediTriage Admin" className="h-9 w-auto object-contain" />
             <span>Admin Control</span>
           </Link>
           <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-primary-soft text-primary font-semibold">

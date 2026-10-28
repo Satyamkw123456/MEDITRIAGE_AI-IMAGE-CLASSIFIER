@@ -18,8 +18,8 @@ export default function Navbar() {
         borderBottom: '1px solid rgba(18, 38, 58, 0.06)',
       }}
     >
-      <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
-        <img src="/logo.svg" alt="MediTriage" style={{ height: '36px', width: 'auto', objectFit: 'contain' }} />
+      <a href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+        <img src="/logo.svg" alt="MediTriage" style={{ height: '48px', width: 'auto', objectFit: 'contain', display: 'block' }} />
       </a>
 
       <nav className="hidden md:flex items-center gap-7">

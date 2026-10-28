@@ -80,7 +80,7 @@ const SEED_MEDIA_ARCHIVE: MediaSeedItem[] = [
   },
 ];
 
-export function MediaCard({ item, seed }: { item: MediaSeedItem; seed: string }) {
+function MediaCard({ item, seed }: { item: MediaSeedItem; seed: string }) {
   const [inspected, setInspected] = useState(false);
 
   return (
