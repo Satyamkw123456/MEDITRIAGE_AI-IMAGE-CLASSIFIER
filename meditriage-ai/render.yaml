@@ -16,6 +16,10 @@ services:
         value: production
       - key: COOKIE_SECURE
         value: "true"
+      - key: DUAL_CONTROL_MODE   # app refuses to boot in production unless 'strict'
+        value: strict
+      - key: AI_DATA_MODE        # synthetic = no real patient data (correct for a college project)
+        value: synthetic
       - key: SECRET_KEY
         generateValue: true
       - key: AUDIT_HMAC_KEY
