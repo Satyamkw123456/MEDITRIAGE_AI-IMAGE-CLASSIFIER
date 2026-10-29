@@ -7,7 +7,7 @@ requires-python = ">=3.11"
 dependencies = [
     "fastapi>=0.111.0",
     "uvicorn[standard]>=0.30.0",
-    "sqlalchemy>=2.0.30",
+    "sqlalchemy>=2.0.30,<2.1",
     "alembic>=1.13.1",
     "pydantic>=2.7.0",
     "pydantic-settings>=2.3.0",
@@ -43,4 +43,3 @@ dev = [
     "hypothesis>=6.168.3",
     "pip-audit>=2.10.1",
 ]
-
