@@ -27,7 +27,7 @@ export default function TermsPage() {
           <div className="space-y-3 pt-4 border-t border-line text-xs">
             <div className="p-4 rounded-xl border border-line bg-bg space-y-2">
               <h3 className="font-bold text-ink text-sm flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                <CheckCircle2 className="w-4 h-4 text-selfcare" />
                 <span>1. Clinician Supremacy & Non-Delegable Responsibility</span>
               </h3>
               <p className="text-muted leading-relaxed">

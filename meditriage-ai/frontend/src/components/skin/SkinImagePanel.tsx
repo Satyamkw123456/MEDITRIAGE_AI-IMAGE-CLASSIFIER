@@ -195,9 +195,28 @@ export function SkinImagePanel({ caseId, canUpload = true }: { caseId: number; c
               {busy ? t("analyzing") : t("analyze")}
             </button>
           </div>
-          {preview && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={preview} alt={t("previewAlt")} className="h-32 w-32 rounded-lg border border-line object-cover" />
+          {preview ? (
+            <div className="relative w-48 h-48 rounded-xl border-2 border-primary/50 overflow-hidden bg-bg shadow-sm">
+              {/* CSS-only 2D Framing Guide Overlay */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={preview} alt={t("previewAlt")} className="w-full h-full object-cover" />
+              <div className="absolute inset-3 border-2 border-dashed border-surface/90 rounded-lg pointer-events-none flex items-center justify-center">
+                <span className="text-[10px] font-mono text-surface font-semibold bg-ink/70 px-1.5 py-0.5 rounded backdrop-blur-xs">
+                  Target Centered
+                </span>
+              </div>
+            </div>
+          ) : (
+            <div className="p-3 rounded-lg border border-line bg-bg text-xs text-muted space-y-1">
+              <p className="font-semibold text-ink flex items-center gap-1.5">
+                <Eye className="w-3.5 h-3.5 text-primary" /> Photography Guidance:
+              </p>
+              <ul className="list-disc pl-4 space-y-0.5">
+                <li>Ensure bright, indirect natural lighting without heavy shadows or glare.</li>
+                <li>Hold phone ~15–20 cm away and center the affected lesion within frame.</li>
+                <li>Photo capture is strictly encrypted &amp; stored under DPDP Act 2023 principles.</li>
+              </ul>
+            </div>
           )}
           <p className="text-xs text-muted">{t("privacy")}</p>
           {error && <p role="alert" className="text-sm font-semibold text-emergency">{error}</p>}

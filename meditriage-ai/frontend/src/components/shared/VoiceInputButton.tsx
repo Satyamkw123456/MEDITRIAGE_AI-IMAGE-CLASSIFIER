@@ -8,12 +8,14 @@ interface VoiceInputButtonProps {
   onTranscript: (text: string) => void;
   className?: string;
   placeholderTarget?: string;
+  disabled?: boolean;
 }
 
 export function VoiceInputButton({
   onTranscript,
   className = "",
   placeholderTarget = "text input",
+  disabled = false,
 }: VoiceInputButtonProps) {
   const [selectedLang, setSelectedLang] = useState<VoiceLanguage>("en-IN");
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
@@ -61,7 +63,8 @@ export function VoiceInputButton({
       <button
         type="button"
         onClick={handleToggle}
-        className={`inline-flex items-center justify-center p-2 rounded-lg border transition-all text-xs font-medium ${
+        disabled={disabled}
+        className={`inline-flex items-center justify-center p-2 rounded-lg border transition-all text-xs font-medium disabled:opacity-40 disabled:cursor-not-allowed ${
           isListening
             ? "bg-emergency text-surface border-emergency animate-pulse ring-2 ring-emergency/30"
             : "bg-surface hover:bg-bg border-line text-ink"

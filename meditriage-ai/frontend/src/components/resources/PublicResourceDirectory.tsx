@@ -149,6 +149,34 @@ export function PublicResourceDirectory() {
         </p>
       </div>
 
+      {/* Pinned 112 Emergency Call Card */}
+      <div className="p-4 sm:p-5 rounded-card bg-emergency text-surface flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
+        <div className="flex items-center gap-3 text-center sm:text-left">
+          <div className="w-10 h-10 rounded-full bg-surface/20 flex items-center justify-center shrink-0">
+            <PhoneCall className="w-5 h-5 text-surface" />
+          </div>
+          <div>
+            <span className="text-[10px] font-mono tracking-widest uppercase opacity-90 block">
+              National Emergency Services
+            </span>
+            <h2 className="font-heading font-bold text-base sm:text-lg">
+              Immediate Medical or Trauma Emergency?
+            </h2>
+            <p className="text-xs opacity-90">
+              Do not wait for directory search. Dial 112 for immediate ambulance and hospital dispatch in India.
+            </p>
+          </div>
+        </div>
+
+        <a
+          href="tel:112"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-surface text-emergency font-bold text-sm shadow-xs hover:opacity-95 transition-all shrink-0"
+        >
+          <PhoneCall className="w-4 h-4 text-emergency" />
+          <span>Call 112 Now</span>
+        </a>
+      </div>
+
       {/* Filter and Search Bar */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         {/* Category Pills */}

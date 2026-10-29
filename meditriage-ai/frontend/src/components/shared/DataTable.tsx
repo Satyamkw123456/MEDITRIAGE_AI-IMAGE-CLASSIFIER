@@ -135,7 +135,7 @@ export function DataTable<T>({
       <div className="overflow-x-auto">
         <table className="w-full text-left text-sm border-collapse" role="table">
           <thead>
-            <tr className="border-b border-line bg-bg/80 text-xs font-semibold text-muted tracking-wider uppercase">
+            <tr className="sticky top-0 z-10 border-b border-line bg-surface text-xs font-semibold text-muted tracking-wider uppercase shadow-xs">
               {columns.map((col) => {
                 const isSorted = sortKey === col.key;
                 return (
@@ -176,14 +176,14 @@ export function DataTable<T>({
               })}
             </tr>
           </thead>
-          <tbody className="divide-y divide-line/70">
+          <tbody className="divide-y divide-line/70 bg-surface">
             {isLoading ? (
-              // Loading Skeleton Rows
+              // Loading Skeleton Rows with shimmer
               Array.from({ length: 5 }).map((_, i) => (
-                <tr key={i} className="animate-pulse">
+                <tr key={i}>
                   {columns.map((col) => (
-                    <td key={col.key} className="py-4 px-4">
-                      <div className="h-4 bg-muted/15 rounded w-3/4"></div>
+                    <td key={col.key} className="py-4 px-4 min-h-[44px]">
+                      <div className="h-4 skeleton-shimmer rounded w-3/4"></div>
                     </td>
                   ))}
                 </tr>
@@ -193,7 +193,7 @@ export function DataTable<T>({
               <tr>
                 <td colSpan={columns.length} className="py-12 text-center">
                   <div className="max-w-xs mx-auto text-center space-y-2">
-                    <div className="w-10 h-10 rounded-full bg-primary-soft text-primary flex items-center justify-center mx-auto">
+                    <div className="w-10 h-10 rounded-full bg-primary-soft text-primary flex items-center justify-center mx-auto shadow-xs">
                       <Inbox className="w-5 h-5" />
                     </div>
                     <h5 className="font-heading font-medium text-ink">{emptyTitle}</h5>
@@ -209,8 +209,8 @@ export function DataTable<T>({
                   <tr
                     key={key}
                     onClick={() => onRowClick && onRowClick(item)}
-                    className={`transition-colors ${
-                      onRowClick ? "cursor-pointer hover:bg-bg/60" : "hover:bg-bg/30"
+                    className={`transition-colors min-h-[44px] ${
+                      onRowClick ? "cursor-pointer hover:bg-bg-tint focus-within:bg-bg-tint" : "hover:bg-bg-tint"
                     }`}
                   >
                     {columns.map((col) => (

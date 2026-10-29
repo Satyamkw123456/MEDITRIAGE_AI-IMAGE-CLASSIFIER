@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import { PhoneCall, Heart, Eye, EyeOff } from "lucide-react";
 import { LanguageSwitcher } from "../shared/LanguageSwitcher";
 import { CaregiverProvider, CaregiverSwitcher } from "../shared/CaregiverSwitcher";
+import { useElderMode } from "@/hooks/useElderMode";
 
 interface PatientLayoutProps {
   children: React.ReactNode;
@@ -19,23 +20,7 @@ export function PatientLayout({
   totalSteps,
   stepTitle,
 }: PatientLayoutProps) {
-  const [elderMode, setElderMode] = useState<boolean>(false);
-
-  // Load elder mode preference
-  useEffect(() => {
-    const saved = localStorage.getItem("meditriage_elder_mode");
-    if (saved === "true") {
-      setElderMode(true);
-    }
-  }, []);
-
-  const toggleElderMode = () => {
-    setElderMode((prev) => {
-      const next = !prev;
-      localStorage.setItem("meditriage_elder_mode", String(next));
-      return next;
-    });
-  };
+  const { elderMode, toggleElderMode } = useElderMode();
 
   return (
     <CaregiverProvider>
@@ -57,6 +42,7 @@ export function PatientLayout({
               className="flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg py-1 px-1.5"
               aria-label="MediTriage Home"
             >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/logo.svg" alt="MediTriage Care" className="h-10 sm:h-11 w-auto object-contain" />
             </Link>
 

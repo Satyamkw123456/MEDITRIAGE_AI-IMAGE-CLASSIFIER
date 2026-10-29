@@ -157,7 +157,7 @@ export default function RateLimitsEditor() {
       {statusMessage && (
         <div className={`p-4 rounded-xl flex items-center justify-between border ${
           statusMessage.type === 'success' 
-            ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-700 dark:text-emerald-300' 
+            ? 'bg-selfcare/10 border-selfcare/30 text-selfcare' 
             : 'bg-[hsl(var(--emergency)/0.1)] border-[hsl(var(--emergency)/0.3)] text-[hsl(var(--emergency))]'
         }`}>
           <div className="flex items-center gap-2 text-sm font-medium">
@@ -264,7 +264,7 @@ export default function RateLimitsEditor() {
                     <td className="py-2.5 px-3 text-right">
                       <button
                         onClick={() => setUnblockingIp(entry.ip)}
-                        className="px-2.5 py-1 rounded-lg text-xs font-medium text-[hsl(var(--ink))] border border-[hsl(var(--line))] bg-[hsl(var(--bg))] hover:bg-emerald-500/10 hover:text-emerald-600 hover:border-emerald-500/30 transition"
+                        className="px-2.5 py-1 rounded-lg text-xs font-medium text-[hsl(var(--ink))] border border-[hsl(var(--line))] bg-[hsl(var(--bg))] hover:bg-selfcare/10 hover:text-selfcare hover:border-selfcare/30 transition"
                       >
                         Unblock
                       </button>
@@ -348,7 +348,7 @@ export default function RateLimitsEditor() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in">
           <div className="w-full max-w-sm p-6 rounded-2xl bg-[hsl(var(--surface))] border border-[hsl(var(--line))] shadow-2xl space-y-4">
             <div className="flex items-center gap-3">
-              <div className="p-2 rounded-xl bg-emerald-500/10 text-emerald-600">
+              <div className="p-2 rounded-xl bg-selfcare/10 text-selfcare">
                 <ShieldAlert className="w-5 h-5" />
               </div>
               <div>
@@ -374,7 +374,7 @@ export default function RateLimitsEditor() {
                 type="button"
                 onClick={() => handleUnblock(unblockingIp)}
                 disabled={submitting}
-                className="px-4 py-1.5 rounded-xl bg-emerald-600 text-white text-xs font-semibold hover:opacity-90 transition disabled:opacity-50 flex items-center gap-1.5"
+                className="px-4 py-1.5 rounded-xl bg-selfcare text-white text-xs font-semibold hover:opacity-90 transition disabled:opacity-50 flex items-center gap-1.5"
               >
                 {submitting && <RefreshCw className="w-3 h-3 animate-spin" />}
                 Confirm Unblock

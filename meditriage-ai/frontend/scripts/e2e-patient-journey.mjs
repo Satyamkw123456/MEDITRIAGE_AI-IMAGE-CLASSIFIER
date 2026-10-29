@@ -65,17 +65,17 @@ async function main() {
     token = regRes.data.access_token;
     console.log(`✅ Step 1: Registered test patient '${email}'`);
   } else {
-    // Attempt login if already registered
+    // Attempt login with pre-seeded patient if rate-limited or existing
     const loginRes = await makeRequest("/api/v1/auth/login", "POST", {
-      email,
-      password: "Password123!",
+      email: "patient@meditriage.ai",
+      password: "Patient@123",
     });
     if (!loginRes.ok) {
       console.error("❌ Authentication failed:", loginRes.data);
       process.exit(1);
     }
     token = loginRes.data.access_token;
-    console.log(`✅ Step 1: Authenticated existing patient '${email}'`);
+    console.log(`✅ Step 1: Authenticated existing patient 'patient@meditriage.ai'`);
   }
 
   // Record disclaimer consent

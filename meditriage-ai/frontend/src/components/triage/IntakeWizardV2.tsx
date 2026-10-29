@@ -331,28 +331,73 @@ export function IntakeWizardV2() {
       )}
 
       {/* Step Indicator Header */}
-      <div className="rounded-card border border-line bg-surface p-4 sm:p-5 shadow-xs flex flex-wrap items-center justify-between gap-3">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-primary-soft text-primary font-bold font-mono text-sm flex items-center justify-center shrink-0">
-            {currentStep}/{totalSteps}
+      <div 
+        role="region" 
+        aria-label="Intake Progress" 
+        className="rounded-card border border-line bg-surface p-4 sm:p-5 shadow-xs flex flex-col gap-3"
+      >
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <div 
+              className="w-10 h-10 rounded-full bg-primary-soft text-primary font-bold font-mono text-sm flex items-center justify-center shrink-0 border border-primary/20"
+              aria-label={`Step ${currentStep} of ${totalSteps}`}
+            >
+              {currentStep}/{totalSteps}
+            </div>
+            <div>
+              <span className="text-[11px] font-semibold uppercase tracking-wider text-muted block">
+                {isCaregiver ? `Caregiver Intake • For ${activePatient?.name}` : "Patient Self-Intake"}
+              </span>
+              <h2 className="font-heading font-bold text-base sm:text-lg text-ink">
+                {currentStep === 1 && "What is the primary symptom troubling you?"}
+                {currentStep === 2 && "How long and how severe is the discomfort?"}
+                {currentStep === 3 && "Record any home vital signs you have"}
+                {currentStep === 4 && "Existing medical conditions & medicines"}
+                {currentStep === 5 && isCaregiver && "Caregiver Observation: Alertness & Mental State"}
+                {((currentStep === 5 && !isCaregiver) || currentStep === 6) && "Review your information and submit"}
+              </h2>
+            </div>
           </div>
-          <div>
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-muted block">
-              {isCaregiver ? `Caregiver Intake • For ${activePatient?.name}` : "Patient Self-Intake"}
-            </span>
-            <h2 className="font-heading font-bold text-base sm:text-lg text-ink">
-              {currentStep === 1 && "What is the primary symptom troubling you?"}
-              {currentStep === 2 && "How long and how severe is the discomfort?"}
-              {currentStep === 3 && "Record any home vital signs you have"}
-              {currentStep === 4 && "Existing medical conditions & medicines"}
-              {currentStep === 5 && isCaregiver && "Caregiver Observation: Alertness & Mental State"}
-              {((currentStep === 5 && !isCaregiver) || currentStep === 6) && "Review your information and submit"}
-            </h2>
+
+          <div className="text-xs font-mono font-semibold text-primary">
+            {Math.round((currentStep / totalSteps) * 100)}% Complete
           </div>
         </div>
 
-        <div className="text-xs font-mono text-muted">
-          {Math.round((currentStep / totalSteps) * 100)}% Complete
+        {/* Accessible Progress Bar & Step Tracker */}
+        <div 
+          role="progressbar" 
+          aria-valuenow={currentStep} 
+          aria-valuemin={1} 
+          aria-valuemax={totalSteps} 
+          aria-label={`Intake Step ${currentStep} of ${totalSteps}`}
+          className="w-full bg-bg h-2 rounded-full overflow-hidden border border-line"
+        >
+          <div 
+            className="bg-primary h-full transition-all duration-300 ease-out" 
+            style={{ width: `${(currentStep / totalSteps) * 100}%` }}
+          />
+        </div>
+
+        {/* Step dots for screen readers & visual orientation */}
+        <div className="flex items-center justify-between gap-1 pt-1" aria-hidden="true">
+          {Array.from({ length: totalSteps }).map((_, idx) => {
+            const stepNum = idx + 1;
+            const isCompleted = stepNum < currentStep;
+            const isCurrent = stepNum === currentStep;
+            return (
+              <div 
+                key={stepNum} 
+                className={`flex-1 h-1 rounded-full transition-all ${
+                  isCurrent 
+                    ? 'bg-primary' 
+                    : isCompleted 
+                    ? 'bg-primary/50' 
+                    : 'bg-line'
+                }`}
+              />
+            );
+          })}
         </div>
       </div>
 
@@ -813,8 +858,8 @@ export function IntakeWizardV2() {
           </div>
         )}
 
-        {/* Wizard Footer Controls */}
-        <div className="flex items-center justify-between gap-4 pt-6 mt-6 border-t border-line">
+        {/* Wizard Footer Controls: Sticky Action Bar */}
+        <div className="sticky bottom-0 z-20 bg-surface/95 backdrop-blur-md -mx-6 px-6 sm:-mx-8 sm:px-8 py-4 mt-6 border-t border-line flex items-center justify-between gap-4 shadow-sm">
           {currentStep > 1 ? (
             <button
               type="button"

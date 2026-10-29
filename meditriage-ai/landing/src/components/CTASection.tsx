@@ -1,5 +1,7 @@
 import { ArrowRight, ShieldCheck } from 'lucide-react'
 
+const appUrl = (import.meta.env.VITE_APP_URL || '').replace(/\/$/, '')
+
 export default function CTASection() {
   return (
     <section
@@ -65,7 +67,7 @@ export default function CTASection() {
         </p>
 
         <a
-          href="http://localhost:3000/en/triage/intake"
+          href={`${appUrl}/en/triage/intake`}
           style={{
             padding: '16px 36px',
             borderRadius: '999px',

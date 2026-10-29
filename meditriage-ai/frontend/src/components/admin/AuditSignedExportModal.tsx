@@ -250,22 +250,22 @@ export default function AuditSignedExportModal({ isOpen, onClose }: AuditSignedE
         {/* Export Completed & Live Verification Sandbox */}
         {exportResult && (
           <div className="space-y-4">
-            <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-800 dark:text-emerald-200 space-y-2">
+            <div className="p-4 rounded-2xl bg-selfcare/10 border border-selfcare/30 text-selfcare space-y-2">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                  <span className="text-xs font-bold">Audit Export Package Ready</span>
+                  <CheckCircle className="w-4 h-4 text-selfcare" />
+                  <span className="text-xs font-bold text-ink">Audit Export Package Ready</span>
                 </div>
-                <span className="text-[11px] font-mono">
+                <span className="text-[11px] font-mono text-muted">
                   {exportResult.total_records} records sealed
                 </span>
               </div>
 
               <div>
-                <span className="text-[10px] uppercase font-bold text-emerald-700 dark:text-emerald-300">
+                <span className="text-[10px] uppercase font-bold text-selfcare">
                   HMAC-SHA256 Digital Signature:
                 </span>
-                <code className="block p-1.5 mt-0.5 rounded bg-black/10 font-mono text-[10px] break-all">
+                <code className="block p-1.5 mt-0.5 rounded bg-black/10 font-mono text-[10px] break-all text-ink">
                   {exportResult.signature}
                 </code>
               </div>
@@ -299,7 +299,7 @@ export default function AuditSignedExportModal({ isOpen, onClose }: AuditSignedE
                   id="verify-intact-export-btn"
                   onClick={() => handleVerifyExport(false)}
                   disabled={verifying}
-                  className="flex-1 py-1.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-xs font-semibold hover:bg-emerald-500/20 transition flex items-center justify-center gap-1.5"
+                  className="flex-1 py-1.5 rounded-xl border border-selfcare/30 bg-selfcare/10 text-selfcare text-xs font-semibold hover:bg-selfcare/20 transition flex items-center justify-center gap-1.5"
                 >
                   <ShieldCheck className="w-3.5 h-3.5" />
                   Verify Authenticity
@@ -326,13 +326,13 @@ export default function AuditSignedExportModal({ isOpen, onClose }: AuditSignedE
               {verifyStatus && (
                 <div className={`p-3 rounded-xl border text-xs ${
                   verifyStatus.is_valid && !verifyStatus.tampered
-                    ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-700 dark:text-emerald-300'
+                    ? 'bg-selfcare/10 border-selfcare/30 text-selfcare'
                     : 'bg-[hsl(var(--emergency)/0.15)] border-[hsl(var(--emergency))] text-[hsl(var(--emergency))]'
                 }`}>
                   <div className="flex items-center gap-2 font-bold">
                     {verifyStatus.is_valid && !verifyStatus.tampered ? (
                       <>
-                        <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                        <ShieldCheck className="w-4 h-4 text-selfcare" />
                         <span>VALID: Cryptographic HMAC Signature Verified Perfectly</span>
                       </>
                     ) : (

@@ -247,6 +247,20 @@ export default function ClinicianPriorityQueuePage() {
           </div>
         </div>
 
+        {/* Prominent Clinical Ruleset Review Status Banner */}
+        <div className="flex items-center gap-3 p-3.5 rounded-2xl border border-urgent/30 bg-urgent/5 text-ink text-xs shadow-xs">
+          <div className="p-2 rounded-xl bg-urgent/15 text-urgent shrink-0">
+            <AlertTriangle className="w-4 h-4" />
+          </div>
+          <div className="flex-1">
+            <span className="font-bold text-ink">Rules pending clinical review</span>
+            <span className="text-muted ml-1.5">— Triage decision-support rulesets currently contain unreviewed draft logic (`reviewed_by: null`). Clinical oversight required on all recommendations.</span>
+          </div>
+          <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-urgent/10 text-urgent border border-urgent/20 shrink-0">
+            Draft Ruleset v1.0
+          </span>
+        </div>
+
         {/* Telemetry Metric Cards */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <div className="p-4 rounded-2xl border border-line bg-surface shadow-xs">

@@ -103,14 +103,23 @@ export const TriageBanner: React.FC<TriageBannerProps> = ({
         {/* Right: Primary Call to Action */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 w-full sm:w-auto mt-2 sm:mt-0 flex-shrink-0">
           {normLevel === 'EMERGENCY' && showEmergencyCall && (
-            <a
-              href="tel:112"
-              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-emergency text-surface font-bold text-base shadow-sm hover:opacity-95 transition min-h-touch"
-              aria-label="Call Emergency Services at 112"
-            >
-              <PhoneCall className="w-5 h-5 animate-bounce" aria-hidden="true" />
-              <span>Call 112</span>
-            </a>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full sm:w-auto">
+              <a
+                href="tel:112"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-emergency text-surface font-bold text-base shadow-sm hover:opacity-95 transition min-h-touch"
+                aria-label="Call Emergency Services at 112"
+              >
+                <PhoneCall className="w-5 h-5" aria-hidden="true" />
+                <span>Call 112</span>
+              </a>
+              <a
+                href="/en/resources?filter=emergency"
+                className="inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-full bg-surface text-ink border border-line font-semibold text-sm shadow-sm hover:bg-bg-tint transition min-h-touch"
+              >
+                <span>Nearest Help</span>
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </a>
+            </div>
           )}
 
           {actionHref ? (

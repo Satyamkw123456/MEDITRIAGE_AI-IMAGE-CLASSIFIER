@@ -161,7 +161,7 @@ export default function SecurityIncidentsManager() {
     switch (st.toUpperCase()) {
       case 'CLOSED':
       case 'REMEDIATED':
-        return 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20';
+        return 'bg-selfcare/10 text-selfcare border-selfcare/20';
       case 'CONTAINED':
         return 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20';
       case 'INVESTIGATING':
@@ -225,7 +225,7 @@ export default function SecurityIncidentsManager() {
       {message && (
         <div className={`p-4 rounded-xl flex items-center justify-between border ${
           message.type === 'success'
-            ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-700 dark:text-emerald-300'
+            ? 'bg-selfcare/10 border-selfcare/30 text-selfcare'
             : 'bg-[hsl(var(--emergency)/0.1)] border-[hsl(var(--emergency)/0.3)] text-[hsl(var(--emergency))]'
         }`}>
           <div className="flex items-center gap-2 text-xs font-medium">

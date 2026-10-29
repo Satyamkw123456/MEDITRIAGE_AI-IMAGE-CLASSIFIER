@@ -112,7 +112,7 @@ export default function LogViewer() {
         <div>
           <div className="flex items-center gap-2">
             <h2 className="text-xl font-bold text-[hsl(var(--ink))]">Operational Log Stream</h2>
-            <div className="flex items-center gap-1.5 px-3 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+            <div className="flex items-center gap-1.5 px-3 py-0.5 rounded-full text-xs font-semibold bg-selfcare/10 text-selfcare border border-selfcare/20">
               <ShieldCheck className="w-3.5 h-3.5" />
               <span>Zero-PHI Certified</span>
             </div>

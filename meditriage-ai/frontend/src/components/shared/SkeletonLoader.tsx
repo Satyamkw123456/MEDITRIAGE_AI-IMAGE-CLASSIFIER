@@ -36,7 +36,7 @@ export function SkeletonLoader({
       {elements.map((_, i) => (
         <div
           key={i}
-          className={`animate-pulse bg-muted/15 ${getVariantClasses()} ${className}`}
+          className={`skeleton-shimmer ${getVariantClasses()} ${className}`}
         />
       ))}
     </div>

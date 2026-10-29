@@ -87,25 +87,25 @@ export default function AuditChainStatusBanner({ onVerified }: AuditChainStatusB
       ) : isIntact ? (
         <div 
           id="audit-chain-intact-banner"
-          className="p-5 rounded-2xl bg-emerald-500/10 border-2 border-emerald-500/30 text-emerald-800 dark:text-emerald-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm"
+          className="p-5 rounded-2xl bg-selfcare/10 border-2 border-selfcare/30 text-selfcare flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xs"
         >
           <div className="flex items-start sm:items-center gap-3.5">
-            <div className="p-2.5 rounded-xl bg-emerald-500/20 text-emerald-600 dark:text-emerald-300 shrink-0">
+            <div className="p-2.5 rounded-xl bg-selfcare/20 text-selfcare shrink-0">
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
               <div className="flex items-center gap-2 flex-wrap">
-                <h3 className="text-base font-bold tracking-tight">
+                <h3 className="text-base font-bold tracking-tight text-ink">
                   Cryptographic Audit Chain Intact
                 </h3>
-                <span className="px-2 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                <span className="px-2 py-0.5 rounded-full text-[11px] font-bold bg-selfcare/20 text-selfcare">
                   {totalRecords} Entries Verified
                 </span>
-                <span className="flex items-center gap-1 text-[11px] font-mono text-emerald-700/80 dark:text-emerald-300/80">
+                <span className="flex items-center gap-1 text-[11px] font-mono text-selfcare">
                   <Lock className="w-3 h-3" /> SHA-256 Immutable
                 </span>
               </div>
-              <p className="text-xs text-emerald-700/90 dark:text-emerald-300/90 mt-0.5">
+              <p className="text-xs text-muted mt-0.5">
                 Every administrative mutation links strictly to the preceding entry hash with zero gap, mutation, or history deletion.
               </p>
             </div>
@@ -116,7 +116,7 @@ export default function AuditChainStatusBanner({ onVerified }: AuditChainStatusB
               id="reverify-chain-btn"
               onClick={() => runVerification(true)}
               disabled={verifying}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-emerald-500/30 bg-emerald-500/15 hover:bg-emerald-500/25 text-xs font-semibold text-emerald-800 dark:text-emerald-200 transition disabled:opacity-50"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-selfcare/30 bg-selfcare/15 hover:bg-selfcare/25 text-xs font-semibold text-selfcare transition disabled:opacity-50"
             >
               <RefreshCw className={`w-3.5 h-3.5 ${verifying ? 'animate-spin' : ''}`} />
               Re-verify Chain
@@ -166,7 +166,7 @@ export default function AuditChainStatusBanner({ onVerified }: AuditChainStatusB
             </div>
             {result?.expected_hash && (
               <div className="flex items-center gap-2">
-                <span className="font-semibold text-emerald-600">Expected:</span>
+                <span className="font-semibold text-selfcare">Expected:</span>
                 <span className="break-all">{result.expected_hash}</span>
               </div>
             )}

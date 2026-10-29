@@ -100,7 +100,7 @@ export default function AuditExplorerTable({ onSelectRecord }: AuditExplorerTabl
       return 'bg-[hsl(var(--urgent)/0.15)] text-[hsl(var(--urgent))] border-[hsl(var(--urgent)/0.3)]';
     }
     if (act.includes('publish') || act.includes('approve')) {
-      return 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30';
+      return 'bg-selfcare/15 text-selfcare border-selfcare/30';
     }
     return 'bg-[hsl(var(--primary)/0.1)] text-[hsl(var(--primary))] border-[hsl(var(--primary)/0.2)]';
   };
@@ -341,7 +341,7 @@ export default function AuditExplorerTable({ onSelectRecord }: AuditExplorerTabl
                       onClick={() => inspectRecord.prev_hash && copyToClipboard(inspectRecord.prev_hash, 'prev')}
                       className="flex items-center gap-1 text-[hsl(var(--primary))] hover:underline"
                     >
-                      {copiedHash === 'prev' ? <Check className="w-3 h-3 text-emerald-500" /> : <Copy className="w-3 h-3" />}
+                      {copiedHash === 'prev' ? <Check className="w-3 h-3 text-selfcare" /> : <Copy className="w-3 h-3" />}
                       Copy
                     </button>
                   </div>
@@ -357,7 +357,7 @@ export default function AuditExplorerTable({ onSelectRecord }: AuditExplorerTabl
                       onClick={() => inspectRecord.entry_hash && copyToClipboard(inspectRecord.entry_hash, 'entry')}
                       className="flex items-center gap-1 text-[hsl(var(--primary))] hover:underline"
                     >
-                      {copiedHash === 'entry' ? <Check className="w-3 h-3 text-emerald-500" /> : <Copy className="w-3 h-3" />}
+                      {copiedHash === 'entry' ? <Check className="w-3 h-3 text-selfcare" /> : <Copy className="w-3 h-3" />}
                       Copy
                     </button>
                   </div>
@@ -379,7 +379,7 @@ export default function AuditExplorerTable({ onSelectRecord }: AuditExplorerTabl
                   </div>
 
                   <div className="p-3 rounded-xl bg-[hsl(var(--bg))] border border-[hsl(var(--line))] overflow-x-auto">
-                    <span className="font-bold text-emerald-600 dark:text-emerald-400 block mb-1">After State:</span>
+                    <span className="font-bold text-selfcare block mb-1">After State:</span>
                     <pre className="font-mono text-[10px] text-[hsl(var(--ink))]">
                       {inspectRecord.after_state ? JSON.stringify(inspectRecord.after_state, null, 2) : 'null'}
                     </pre>

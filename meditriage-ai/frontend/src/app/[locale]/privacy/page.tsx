@@ -37,7 +37,7 @@ export default function PrivacyPage() {
 
             <div className="p-4 rounded-xl border border-line bg-bg space-y-2">
               <div className="flex items-center gap-2 font-bold text-ink">
-                <EyeOff className="w-4 h-4 text-emerald-600" />
+                <EyeOff className="w-4 h-4 text-selfcare" />
                 <span>Statutory Right to Erasure</span>
               </div>
               <p className="text-muted leading-relaxed">

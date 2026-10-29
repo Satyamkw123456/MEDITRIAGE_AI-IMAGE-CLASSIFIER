@@ -1,24 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #0d9488;
-  --primary-dark: #0f766e;
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --primary: #0E7C86;
+  --primary-dark: #0a626a;
   --primary-light: #14b8a6;
-  --primary-soft: #ccfbf1;
-  --bg: #fbfaf7;
+  --primary-soft: #E4F3F4;
+  --bg: #FBFAF7;
+  --bg-tint: #F1F9F9;
   --surface: #ffffff;
   --surface-alt: #f4f2ec;
-  --ink: #12263a;
-  --muted: #64748b;
+  --ink: #12263A;
+  --muted: #5B6B7A;
   --border: rgba(18, 38, 58, 0.08);
+  --border-control: #7C8B99;
+  --accent-warm: #C9A24B;
+  --emergency: #C62828;
+  --urgent: #D97706;
+  --routine: #1F6FB2;
+  --selfcare: #2E7D5B;
   --shadow-sm: 0 1px 3px rgba(18, 38, 58, 0.08);
   --shadow-md: 0 4px 14px rgba(18, 38, 58, 0.12);
   --shadow-lg: 0 12px 28px rgba(18, 38, 58, 0.14);
-}
-
-@theme {
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --glass-bg: rgba(255, 255, 255, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.9);
+  --scrim-bg: rgba(251, 250, 247, 0.85);
 }
 
 * {
@@ -28,7 +35,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-sans);
   background-color: var(--bg);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
@@ -36,5 +43,5 @@ body {
 }
 
 .font-display {
-  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-display);
 }

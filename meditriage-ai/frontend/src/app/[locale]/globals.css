@@ -5,9 +5,6 @@
 @tailwind utilities;
 
 @layer base {
-  /* Google Fonts webfont fallback import */
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-
   * {
     border-color: var(--line);
   }
@@ -26,6 +23,75 @@
   :root {
     color-scheme: light;
   }
+}
+
+/* Glassmorphism utility with robust accessibility fallbacks */
+.glass {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+}
+
+@supports not (backdrop-filter: blur(16px)) {
+  .glass {
+    background-color: var(--surface);
+    border: 1px solid var(--line);
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .glass {
+    background-color: var(--surface);
+    border: 1px solid var(--line);
+  }
+}
+
+/* Keyframe Animations */
+@keyframes fadeRise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-rise {
+  animation: fadeRise var(--dur-base) var(--ease-out) forwards;
+}
+
+@keyframes skeletonShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(90deg, var(--bg-tint) 25%, var(--primary-soft) 37%, var(--bg-tint) 63%);
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.4s ease-in-out infinite;
+}
+
+/* Motion Accessibility Guardrails */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+[data-elder="true"] *, .elder-mode * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
 }
 
 /* Elder Mode Touch Target Scaling & Accessibility */

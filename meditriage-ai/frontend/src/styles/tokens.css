@@ -4,15 +4,21 @@
 :root {
   /* Surfaces & Canvas */
   --bg: #FBFAF7;
+  --bg-tint: #F1F9F9;
   --surface: #FFFFFF;
+  --surface-raised: #FFFFFF;
   --ink: #12263A;
   --muted: #5B6B7A;
   --line: #E6E9EE;
+  --border-control: #7C8B99;
 
   /* Primary Brand & Soft Highlight */
   --primary: #0E7C86;
   --primary-soft: #E4F3F4;
   --primary-hover: #0a626a;
+
+  /* Warm Accent */
+  --accent-warm: #C9A24B;
 
   /* Clinical Triage Status Colors (Must be paired with icons and labels, never color alone) */
   --emergency: #C62828;
@@ -24,6 +30,16 @@
   --selfcare: #2E7D5B;
   --selfcare-soft: #E8F5E9;
 
+  /* Glassmorphism tokens */
+  --glass-bg: rgba(255, 255, 255, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.9);
+  --glass-hairline: rgba(18, 38, 58, 0.08);
+  --glass-blur: 16px;
+
+  /* Gradients */
+  --grad-hero: linear-gradient(180deg, var(--bg-tint), var(--bg));
+  --grad-cta: linear-gradient(135deg, #0E7C86, #0a626a);
+
   /* Radii & Elevation */
   --radius: 14px;
   --radius-sm: 8px;
@@ -31,11 +47,19 @@
   --radius-full: 9999px;
   --shadow: 0 1px 2px rgba(18, 38, 58, 0.06), 0 8px 24px rgba(18, 38, 58, 0.06);
   --shadow-sm: 0 1px 3px rgba(18, 38, 58, 0.08);
+  --shadow-md: 0 4px 14px rgba(18, 38, 58, 0.12);
   --shadow-lg: 0 12px 32px rgba(18, 38, 58, 0.12);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur-base: 220ms;
+  --dur-slow: 400ms;
 
   /* Typography Stacks */
   --font-latin: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-devanagari: "Noto Sans Devanagari", "Plus Jakarta Sans", sans-serif;
+  --font-display: "Space Grotesk", var(--font-latin);
   --font-family-base: var(--font-latin), var(--font-devanagari);
 
   /* Standard Base Metric Scale */

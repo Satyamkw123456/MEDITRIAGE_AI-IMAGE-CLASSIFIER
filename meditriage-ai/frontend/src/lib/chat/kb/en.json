@@ -1,0 +1,362 @@
+[
+  {
+    "id": "what-is-meditriage",
+    "q": ["what is meditriage", "what does meditriage do", "about meditriage ai", "tell me about this platform"],
+    "a": "MediTriage AI is a clinical decision-support platform designed for geriatric emergency triage. It evaluates symptoms against the patient's individual baseline, flags medication masking, and assists attending doctors in prioritizing care.",
+    "actions": [{"label": "How Intake Works", "href": "/triage/consent"}, {"label": "Emergency Directory", "href": "/resources"}],
+    "tags": ["overview", "about", "geriatric"],
+    "source": "docs/README.md",
+    "audience": "public"
+  },
+  {
+    "id": "medical-disclaimer",
+    "q": ["is this a doctor", "can you prescribe medicine", "medical disclaimer", "is this medical advice"],
+    "a": "MediTriage AI provides decision support only, not medical diagnosis or prescription. Under India's DPDP Act principles, an authorized registered physician always evaluates the patient and makes the final triage decision.",
+    "actions": [{"label": "Review Terms", "href": "/terms"}],
+    "tags": ["disclaimer", "safety", "legal"],
+    "source": "docs/SAFETY.md",
+    "audience": "public"
+  },
+  {
+    "id": "emergency-protocol",
+    "q": ["emergency help", "call ambulance", "severe heart attack", "what to do in emergency", "112"],
+    "a": "If experiencing severe chest pain, stroke signs, difficulty breathing, or collapse, call National Emergency 112 or PMC 108 immediately. Do not wait for online intake or chat evaluation.",
+    "actions": [{"label": "Call 112", "href": "tel:112"}, {"label": "Pune Directory", "href": "/resources"}],
+    "tags": ["emergency", "ambulance", "112"],
+    "source": "docs/EMERGENCY.md",
+    "audience": "public"
+  },
+  {
+    "id": "intake-process",
+    "q": ["how does intake work", "start symptom intake", "how to submit symptoms", "steps to triage"],
+    "a": "Triage intake is a guided 4-step wizard: grant digital informed consent, select your primary symptoms and severity, record home vitals if available, and list current medications. Results are computed instantly.",
+    "actions": [{"label": "Start Triage Intake", "href": "/triage/consent"}],
+    "tags": ["intake", "wizard", "symptoms"],
+    "source": "docs/INTAKE_GUIDE.md",
+    "audience": "patient"
+  },
+  {
+    "id": "triage-levels",
+    "q": ["what do colors mean", "triage levels", "red yellow green", "what is emergency level"],
+    "a": "Triage assigns four levels: Red (Emergency — immediate life-threatening care), Yellow (Urgent — medical review within 1-2 hours), Blue (Routine — scheduled clinic consult), and Green (Self-Care — at-home symptomatic management).",
+    "actions": [{"label": "View My Cases", "href": "/dashboard/patient"}],
+    "tags": ["triage", "levels", "urgency"],
+    "source": "docs/TRIAGE_PROTOCOL.md",
+    "audience": "patient"
+  },
+  {
+    "id": "confidence-badge",
+    "q": ["what is confidence score", "how sure are we", "confidence badge meaning", "algorithm confidence"],
+    "a": "The Confidence Badge indicates agreement between deterministic clinical safety rules and AI inferences. High confidence (●) indicates strong evidence alignment, while Medium (◐) or Low (○) prompts mandatory clinician review.",
+    "actions": [{"label": "Patient Dashboard", "href": "/dashboard/patient"}],
+    "tags": ["confidence", "quality", "badge"],
+    "source": "docs/QUALITY_LAYER.md",
+    "audience": "patient"
+  },
+  {
+    "id": "medication-shield",
+    "q": ["what is medication shield", "pharmacological masking", "beta blocker masking", "medicine warning"],
+    "a": "Medication Shield alerts clinicians when a patient's daily drugs (like beta-blockers or analgesics) mask physiological stress indicators like elevated heart rate or fever, preventing under-triage.",
+    "actions": [{"label": "Explore AI Hub", "href": "/ai-hub"}],
+    "tags": ["shield", "medications", "pharmacology"],
+    "source": "docs/MEDICATION_SHIELD.md",
+    "audience": "patient"
+  },
+  {
+    "id": "baseline-delta-engine",
+    "q": ["what is geriatric delta", "baseline comparison", "personal baseline vitals", "delta engine"],
+    "a": "Older adults often have unique baseline vitals (e.g. chronic hypertension). The Geriatric Delta Engine compares reported vitals against their historical baseline rather than standard young-adult textbook ranges.",
+    "actions": [{"label": "View Medical Profile", "href": "/dashboard/patient"}],
+    "tags": ["baseline", "geriatric", "delta"],
+    "source": "docs/DELTA_ENGINE.md",
+    "audience": "patient"
+  },
+  {
+    "id": "emergency-qr-card",
+    "q": ["what is emergency qr card", "how does qr card work", "paramedic emergency card", "offline qr"],
+    "a": "The Emergency QR Card contains an encrypted, time-limited summary of vital conditions, allergies, and blood group. Paramedics can scan it on an ambulance run without needing an account or login.",
+    "actions": [{"label": "Manage Emergency Card", "href": "/patient/emergency-card"}],
+    "tags": ["qr", "emergency-card", "paramedic"],
+    "source": "docs/EMERGENCY_CARD.md",
+    "audience": "patient"
+  },
+  {
+    "id": "qr-card-expiry",
+    "q": ["does qr card expire", "renew emergency card", "qr code validity"],
+    "a": "Yes. To protect patient privacy under DPDP Act 2023, public emergency QR cards automatically expire after 30 to 90 days. You can regenerate or revoke the card anytime from your manager.",
+    "actions": [{"label": "Regenerate Card", "href": "/patient/emergency-card"}],
+    "tags": ["qr", "expiry", "security"],
+    "source": "docs/EMERGENCY_CARD.md",
+    "audience": "patient"
+  },
+  {
+    "id": "caregiver-proxy-access",
+    "q": ["can caregiver submit intake", "family proxy triage", "caregiver permissions", "help my parent"],
+    "a": "Yes. Family caregivers can register, link to an elderly parent with consent, and submit proxy symptom assessments, update medication baselines, or manage emergency QR cards on their behalf.",
+    "actions": [{"label": "Caregivers Manager", "href": "/patient/caregivers"}],
+    "tags": ["caregiver", "proxy", "family"],
+    "source": "docs/CAREGIVER_DELEGATION.md",
+    "audience": "patient"
+  },
+  {
+    "id": "language-switcher",
+    "q": ["how to change language", "hindi support", "marathi support", "can i use marathi"],
+    "a": "MediTriage AI natively supports English, हिन्दी (Hindi), and मराठी (Marathi). Use the language switcher in the top navigation header to toggle your preferred language at any time.",
+    "actions": [{"label": "Home", "href": "/"}],
+    "tags": ["language", "i18n", "marathi", "hindi"],
+    "source": "docs/I18N.md",
+    "audience": "public"
+  },
+  {
+    "id": "elder-mode-feature",
+    "q": ["what is elder mode", "how to enable larger text", "elder mode switch", "accessibility for seniors"],
+    "a": "Elder Mode enlarges typography to 20px base, expands tap targets to 56px, increases contrast to 7:1 (WCAG AAA), and disables rapid animations for senior users and low-vision individuals.",
+    "actions": [{"label": "Toggle Elder Mode", "href": "#"}],
+    "tags": ["elder-mode", "accessibility", "seniors"],
+    "source": "docs/ACCESSIBILITY.md",
+    "audience": "public"
+  },
+  {
+    "id": "dpdp-privacy-rights",
+    "q": ["how is my data protected", "dpdp act 2023", "data privacy rights", "can i delete my data"],
+    "a": "Under India's Digital Personal Data Protection (DPDP) Act 2023, your data is processed strictly for triage care. You have the statutory right to view, correct, export, or permanently erase your health records.",
+    "actions": [{"label": "Read Privacy Policy", "href": "/privacy"}],
+    "tags": ["dpdp", "privacy", "rights", "gdpr"],
+    "source": "docs/PRIVACY.md",
+    "audience": "public"
+  },
+  {
+    "id": "consent-withdrawal",
+    "q": ["how to withdraw consent", "revoke consent", "stop data processing"],
+    "a": "You can withdraw your digital consent at any time via your patient settings or by contacting privacy compliance. Upon withdrawal, future processing ceases immediately.",
+    "actions": [{"label": "Consent Status", "href": "/triage/consent"}],
+    "tags": ["consent", "revoke", "dpdp"],
+    "source": "docs/CONSENT.md",
+    "audience": "patient"
+  },
+  {
+    "id": "skin-wound-photo",
+    "q": ["how to upload skin photo", "wound picture analysis", "camera photo of rash", "skin triage"],
+    "a": "You can upload a clear photo of a skin lesion or wound during case review. Our dual-agent pipeline analyzes morphological descriptors and severity. This is advisory: a doctor always inspects the lesion.",
+    "actions": [{"label": "View Recent Cases", "href": "/dashboard/patient"}],
+    "tags": ["skin", "wound", "photo"],
+    "source": "docs/SKIN_TRIAGE.md",
+    "audience": "patient"
+  },
+  {
+    "id": "ar-3d-status",
+    "q": ["do you have 3d or ar", "augmented reality camera", "ar body scanner"],
+    "a": "Augmented Reality (AR) and 3D camera features are currently unavailable. We use standard, high-resolution 2D photos with framing guides to ensure reliable performance on all mobile devices.",
+    "actions": [{"label": "Learn More", "href": "/ai-hub"}],
+    "tags": ["ar", "camera", "3d"],
+    "source": "docs/TECH_SPEC.md",
+    "audience": "public"
+  },
+  {
+    "id": "clinician-review-wait",
+    "q": ["why is case pending review", "doctor has not verified", "when will clinician review"],
+    "a": "All triage cases are routed to the attending clinician queue. Priority is given to emergency and urgent flags. Cases remain marked 'Pending Review' until confirmed or amended by a licensed physician.",
+    "actions": [{"label": "Check Case Status", "href": "/dashboard/patient"}],
+    "tags": ["clinician", "verification", "queue"],
+    "source": "docs/CLINICIAN_WORKFLOW.md",
+    "audience": "patient"
+  },
+  {
+    "id": "unreviewed-ruleset-notice",
+    "q": ["what is unreviewed ruleset", "rules pending clinical review", "algorithm validation banner"],
+    "a": "As an academic clinical prototype, certain specialized triage decision rules carry an 'Awaiting Clinical Review' tag to notify providers that ongoing peer review is underway before full production lock.",
+    "actions": [{"label": "Safety Governance", "href": "/terms"}],
+    "tags": ["ruleset", "governance", "validation"],
+    "source": "docs/SAFETY.md",
+    "audience": "clinician"
+  },
+  {
+    "id": "pune-resources-hospitals",
+    "q": ["pune hospital contact", "sassoon hospital phone", "kem hospital pune", "pune emergency ambulance"],
+    "a": "Key Pune emergency centers: Sassoon General Hospital (+91 20 2612 8000), KEM Hospital (+91 20 6603 7300), and PMC 108 Ambulance Dispatch. All entries are verified in our directory.",
+    "actions": [{"label": "Pune Directory", "href": "/resources"}],
+    "tags": ["pune", "hospitals", "ambulance"],
+    "source": "docs/RESOURCES.md",
+    "audience": "public"
+  },
+  {
+    "id": "offline-operation",
+    "q": ["does this work offline", "no internet connection", "offline emergency card"],
+    "a": "Yes. Once an Emergency QR Card is generated, it functions 100% offline. Cached local clinical guidelines also remain accessible even during network interruptions.",
+    "actions": [{"label": "Emergency Card", "href": "/patient/emergency-card"}],
+    "tags": ["offline", "network", "connectivity"],
+    "source": "docs/OFFLINE.md",
+    "audience": "public"
+  },
+  {
+    "id": "password-reset",
+    "q": ["forgot password", "reset password", "change login password"],
+    "a": "For patient and caregiver accounts, contact hospital intake support or use account recovery. Clinician and administrative accounts require security verification by your designated hospital administrator.",
+    "actions": [{"label": "Sign In", "href": "/login"}],
+    "tags": ["password", "account", "login"],
+    "source": "docs/AUTH.md",
+    "audience": "public"
+  },
+  {
+    "id": "clinician-copilot",
+    "q": ["what is clinician copilot", "physician ai copilot", "shift digest"],
+    "a": "Clinician Copilot is an AI sidecar for verified doctors. It synthesizes complex geriatric histories, highlights medication interactions, drafts shift handoff digests, and proposes structured triage amendments.",
+    "actions": [{"label": "Clinician Portal", "href": "/dashboard/clinician"}],
+    "tags": ["copilot", "clinician", "physician"],
+    "source": "docs/COPILOT.md",
+    "audience": "clinician"
+  },
+  {
+    "id": "ai-hub-features",
+    "q": ["what is ai hub", "health companion", "visit prep", "summary explainer"],
+    "a": "The AI Hub offers four specialized services: Plain-Language Summary Explainer, Doctor Visit Preparation Checklist, Medication Interaction Review, and the Geriatric Health Companion chat assistant.",
+    "actions": [{"label": "Open AI Hub", "href": "/ai-hub"}],
+    "tags": ["ai-hub", "companion", "tools"],
+    "source": "docs/AI_HUB.md",
+    "audience": "patient"
+  },
+  {
+    "id": "chest-pain-protocol",
+    "q": ["chest pain advice", "heart hurts", "pain in left arm"],
+    "a": "Chest pain, pressure, or pain radiating to the jaw/arm in older adults is an immediate medical emergency. Do not attempt home treatment. Call 112 or transport to the nearest emergency department right away.",
+    "actions": [{"label": "Call 112", "href": "tel:112"}, {"label": "Hospital Directory", "href": "/resources"}],
+    "tags": ["chest-pain", "cardiac", "emergency"],
+    "source": "docs/CLINICAL_RULES.md",
+    "audience": "public"
+  },
+  {
+    "id": "stroke-symptoms",
+    "q": ["stroke signs", "face droop", "slurred speech", "weak arm"],
+    "a": "Remember FAST: Face drooping, Arm weakness, Speech difficulty, Time to call 112. Acute stroke requires hospital thrombolysis or intervention within golden hours. Call 112 immediately.",
+    "actions": [{"label": "Call 112", "href": "tel:112"}],
+    "tags": ["stroke", "fast", "emergency"],
+    "source": "docs/CLINICAL_RULES.md",
+    "audience": "public"
+  },
+  {
+    "id": "fall-assessment",
+    "q": ["elderly fall", "senior fell down", "head hit in fall"],
+    "a": "Falls in older adults may cause hidden subdural hematomas, fractures, or internal bleeding—especially if on blood thinners like aspirin or warfarin. Seek clinical examination promptly.",
+    "actions": [{"label": "Start Triage", "href": "/triage/consent"}, {"label": "Nearby Hospitals", "href": "/resources"}],
+    "tags": ["fall", "geriatric", "injury"],
+    "source": "docs/GERIATRIC_SUBS.md",
+    "audience": "patient"
+  },
+  {
+    "id": "delirium-vs-dementia",
+    "q": ["sudden confusion", "acting confused today", "acute mental change"],
+    "a": "Sudden onset confusion (over hours or days) is typically Delirium, often triggered by infections (UTI, pneumonia) or medications. This is an urgent medical condition requiring rapid doctor evaluation.",
+    "actions": [{"label": "Report Symptoms", "href": "/triage/consent"}],
+    "tags": ["delirium", "confusion", "mental"],
+    "source": "docs/GERIATRIC_SUBS.md",
+    "audience": "patient"
+  },
+  {
+    "id": "audit-ledger",
+    "q": ["how are records audited", "audit log integrity", "tamper proof logs"],
+    "a": "All clinical overrides, triage amendments, and data access events are cryptographically hashed and logged to an immutable audit trail adhering to DPDP Act 2023 compliance standards.",
+    "actions": [{"label": "Admin Audit Console", "href": "/dashboard/admin/audit"}],
+    "tags": ["audit", "cryptography", "admin"],
+    "source": "docs/SECURITY.md",
+    "audience": "clinician"
+  },
+  {
+    "id": "break-glass-access",
+    "q": ["what is break glass", "emergency data access", "break-glass protocol"],
+    "a": "Break-glass protocol grants emergency physicians immediate elevated access to an incapacitated patient's complete history during life-threatening crises, creating an immutable high-priority audit record.",
+    "actions": [{"label": "Admin Governance", "href": "/dashboard/admin"}],
+    "tags": ["break-glass", "security", "emergency"],
+    "source": "docs/RBAC.md",
+    "audience": "clinician"
+  },
+  {
+    "id": "vital-signs-recording",
+    "q": ["how to enter vitals", "blood pressure input", "pulse and temperature"],
+    "a": "In Step 3 of intake, you can enter home blood pressure (e.g. 130/80), heart rate (bpm), oral temperature (°F), and oxygen saturation (SpO2 %). If you don't have these instruments, vitals are optional.",
+    "actions": [{"label": "Intake Flow", "href": "/triage/consent"}],
+    "tags": ["vitals", "blood-pressure", "intake"],
+    "source": "docs/INTAKE_GUIDE.md",
+    "audience": "patient"
+  },
+  {
+    "id": "atypical-geriatric-symptoms",
+    "q": ["atypical presentation", "elderly infection without fever", "why is geriatric different"],
+    "a": "Older patients frequently do not exhibit typical symptoms. Serious infections may present as mild confusion or loss of appetite rather than high fever. MediTriage adjusts safety thresholds accordingly.",
+    "actions": [{"label": "Read About Baseline", "href": "/ai-hub"}],
+    "tags": ["geriatric", "atypical", "presentation"],
+    "source": "docs/CLINICAL_RULES.md",
+    "audience": "public"
+  },
+  {
+    "id": "voice-input-help",
+    "q": ["can i speak symptoms", "voice dictation", "mic button"],
+    "a": "Yes. Look for the microphone icon in the intake form or chat composer. Tap it once to dictate symptoms in English, Hindi, or Marathi without typing.",
+    "actions": [{"label": "Start Intake", "href": "/triage/consent"}],
+    "tags": ["voice", "dictation", "accessibility"],
+    "source": "docs/VOICE.md",
+    "audience": "public"
+  },
+  {
+    "id": "download-pdf-summary",
+    "q": ["download triage report", "print case summary", "save pdf report"],
+    "a": "On your Case Result page, click 'Download Clinical PDF' to generate a print-ready clinical report formatted with triage levels, vitals delta, and medication shield alerts to hand to your doctor.",
+    "actions": [{"label": "View Cases", "href": "/dashboard/patient"}],
+    "tags": ["pdf", "report", "print"],
+    "source": "docs/CASE_EXPORT.md",
+    "audience": "patient"
+  },
+  {
+    "id": "admin-kill-switch",
+    "q": ["what is ai kill switch", "disable ai model", "emergency ai shutdown"],
+    "a": "The administrative control plane includes cryptographic kill switches allowing hospital administrators to instantly suspend AI models or fall back to deterministic-only rules within milliseconds.",
+    "actions": [{"label": "AI Control Console", "href": "/dashboard/admin/ai-control"}],
+    "tags": ["kill-switch", "safety", "admin"],
+    "source": "docs/ADMIN_GUIDE.md",
+    "audience": "clinician"
+  },
+  {
+    "id": "medication-interaction-review",
+    "q": ["check medicine interaction", "polypharmacy check", "drug conflict"],
+    "a": "Through the AI Hub Medication Review tool, seniors and caregivers can input their daily drug regimen to detect known polypharmacy conflicts, renal clearance warnings, or symptom masking.",
+    "actions": [{"label": "AI Hub Med Review", "href": "/ai-hub"}],
+    "tags": ["polypharmacy", "drugs", "safety"],
+    "source": "docs/MEDICATION_SHIELD.md",
+    "audience": "patient"
+  },
+  {
+    "id": "doctor-visit-prep",
+    "q": ["how to prepare for doctor visit", "questions for doctor", "visit checklist"],
+    "a": "Use the AI Hub 'Visit Prep' module to compile a tailored 1-page question sheet and symptom timeline to take to your upcoming consultation with your geriatrician or primary doctor.",
+    "actions": [{"label": "Visit Prep Tool", "href": "/ai-hub"}],
+    "tags": ["visit-prep", "doctor", "consultation"],
+    "source": "docs/AI_HUB.md",
+    "audience": "patient"
+  },
+  {
+    "id": "soft-delete-grace-period",
+    "q": ["what is 30 day grace period", "restore deleted case", "undo case deletion"],
+    "a": "Deleted cases enter a 30-day grace period where they remain restorable before permanent cryptographic erasure, preventing accidental loss of medical history.",
+    "actions": [{"label": "View My Cases", "href": "/dashboard/patient"}],
+    "tags": ["delete", "restore", "grace-period"],
+    "source": "docs/CASE_LIFECYCLE.md",
+    "audience": "patient"
+  },
+  {
+    "id": "nearest-trauma-centers-pune",
+    "q": ["trauma centers in pune", "icu beds pune", "emergency surgery pune"],
+    "a": "Leading government and private trauma facilities include Sassoon General Hospital (Station Road), KEM Hospital (Rasta Peth), and Deenanath Mangeshkar Hospital (Erandwane). Consult the directory for directions.",
+    "actions": [{"label": "Explore Pune Directory", "href": "/resources"}],
+    "tags": ["trauma", "pune", "icu"],
+    "source": "docs/RESOURCES.md",
+    "audience": "public"
+  },
+  {
+    "id": "who-developed-meditriage",
+    "q": ["who created meditriage", "about developers", "project background"],
+    "a": "MediTriage AI is engineered as an advanced geriatric clinical decision-support system, adhering to Indian DPDP Act 2023 standards and clinical governance protocols for elderly care.",
+    "actions": [{"label": "Review Governance", "href": "/terms"}],
+    "tags": ["about", "governance", "background"],
+    "source": "docs/README.md",
+    "audience": "public"
+  }
+]
